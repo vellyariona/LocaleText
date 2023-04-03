@@ -8,4 +8,7 @@
     <string name="dial_log_message">لا يمكن حل التطبيق لـ ACTION_DIAL Intent.</string>
     <string name="action_language">لغة</string>
     <string name="expired_label">منتهي الصلاحية :</string>
+    <string name="btn_submission">يُقدِّم</string>
+    <string name="text_input">السعر / العنصر:</string>
+    <string name="text_price">السعر الاجمالي لـ 100 شخص:</string>
 </resources>

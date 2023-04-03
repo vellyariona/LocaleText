@@ -21,4 +21,10 @@
     <string name="dial_log_message">Can\'t resolve app for ACTION_DIAL Intent.</string>
     <string name="action_language">Language</string>
     <string name="expired_label">Expired date :</string>
+
+<!--    tugas-->
+    <string name="text_input">Price/item :</string>
+    <string name="text_price">Total price for 100 pax :</string>
+    <string name="btn_submission">Submit</string>
+
 </resources>

@@ -9,15 +9,20 @@ import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.text.DateFormat;
+import java.text.NumberFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
+    TextView inputText;
+    TextView price;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +46,27 @@ public class MainActivity extends AppCompatActivity {
         String formatDate = DateFormat.getDateInstance().format(myDate);
         TextView expiredTextView = findViewById(R.id.date);
         expiredTextView.setText(formatDate);
-    }
 
+
+//        tugas
+        inputText = findViewById(R.id.input_text);
+        price = findViewById(R.id.total_price);
+
+        findViewById(R.id.btn_submit).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //ubah int ke text
+                int harga = Integer.parseInt(inputText.getText().toString());
+                //hitung harga total
+                int totalHarga = harga*100;
+
+                //currency total harga
+                Locale current = getResources().getConfiguration().locale;
+                String format = NumberFormat.getCurrencyInstance(current).format(totalHarga);
+                price.setText(format);
+            }
+        });
+    }
     /**
      * Shows the Help screen.
      */
